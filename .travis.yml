@@ -1,0 +1,12 @@
+sudo: false
+
+services:
+  - docker
+
+script:
+ - set -e
+ - echo 'Build and check docker image'
+ - docker build -t mageck .
+ - docker images | grep -c mageck
+ - echo 'Verify program(s) used by this repo'
+ - docker run -t --rm mageck megeck -h
