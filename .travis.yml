@@ -9,4 +9,4 @@ script:
  - docker build -t mageck .
  - docker images | grep -c mageck
  - echo 'Verify program(s) used by this repo'
- - docker run -t --rm mageck megeck -h
+ - docker run -t --rm mageck mageck -h
